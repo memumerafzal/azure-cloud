@@ -14,7 +14,7 @@ To see your VM in action, install the IIS web server. Open a PowerShell prompt o
 	Invoke-AzVMRunCommand -ResourceGroupName 'myResourceGroup' -VMName 'myVM' -CommandId 'RunPowerShellScript' -ScriptString 'Install-WindowsFeature -Name Web-Server -IncludeManagementTools'
 ```
 
-
+## Updated Command
 
 ## Disclaimer
 
