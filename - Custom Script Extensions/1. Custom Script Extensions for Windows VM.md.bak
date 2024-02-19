@@ -1,10 +1,10 @@
 # - Custom Script Extensions
 
-This repository provides instructions for installing the Chrome on a virtual machine (VM) via a Storage Account using Custom Script Extensions in the Azure Cloud
+This repository provides instructions for installing the IIS Role on a virtual machine (VM) via a Storage Account using Custom Script Extensions in the Azure Cloud
 
 
 
-## Chrome |  Custom Script Extensions
+## IIS |  Custom Script Extensions
 
 > **NOTE:** Save script as "ExampleCustomScriptExtensionsForWindowsVM.ps1"
 
