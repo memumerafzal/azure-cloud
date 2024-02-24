@@ -33,5 +33,6 @@ To work around this issue, apply the Group Policy settings that are mentioned in
 Microsoft has confirmed that it's a problem in the Microsoft products that are listed in the Applies to section.
 
 ## More information
+#updated
 
 For more information, see [Description of the standard terminology that is used to describe Microsoft software updates](../../windows-client/deployment/standard-terminology-software-updates.md).
