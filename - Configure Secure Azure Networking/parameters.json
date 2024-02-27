@@ -1,0 +1,87 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "routeTables_RT1_name": {
+            "value": null
+        },
+        "routeTables_RT2_name": {
+            "value": null
+        },
+        "virtualMachines_VM1_name": {
+            "value": null
+        },
+        "virtualMachines_VM2_name": {
+            "value": null
+        },
+        "virtualMachines_VM3_name": {
+            "value": null
+        },
+        "virtualNetworks_VNet1_name": {
+            "value": null
+        },
+        "virtualNetworks_VNet2_name": {
+            "value": null
+        },
+        "virtualNetworks_VNet3_name": {
+            "value": null
+        },
+        "virtualNetworks_VNet4_name": {
+            "value": null
+        },
+        "azureFirewalls_AzureFW_name": {
+            "value": null
+        },
+        "networkInterfaces_vm1363_name": {
+            "value": null
+        },
+        "networkInterfaces_vm2834_name": {
+            "value": null
+        },
+        "networkInterfaces_vm3629_name": {
+            "value": null
+        },
+        "publicIPAddresses_FW1PiP_name": {
+            "value": null
+        },
+        "publicIPAddresses_VM1PiP_name": {
+            "value": null
+        },
+        "publicIPAddresses_VM2PiP_name": {
+            "value": null
+        },
+        "publicIPAddresses_VM3PiP_name": {
+            "value": null
+        },
+        "privateDnsZones_devforks_com_name": {
+            "value": null
+        },
+        "applicationSecurityGroups_ASG_name": {
+            "value": null
+        },
+        "networkSecurityGroups_VM1_nsg_name": {
+            "value": null
+        },
+        "networkSecurityGroups_VM2_nsg_name": {
+            "value": null
+        },
+        "networkSecurityGroups_VM3_nsg_name": {
+            "value": null
+        },
+        "storageAccounts_testingcontainer_name": {
+            "value": null
+        },
+        "firewallPolicies_FWPreminumPolicy_name": {
+            "value": null
+        },
+        "networkSecurityGroups_Subnet1_NSG_name": {
+            "value": null
+        },
+        "schedules_shutdown_computevm_vm1_name": {
+            "value": null
+        },
+        "schedules_shutdown_computevm_vm2_name": {
+            "value": null
+        }
+    }
+}
