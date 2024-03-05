@@ -1,0 +1,32 @@
+az login
+
+az group create --name {name of your resource group} --location "{location}"
+
+#To run this deployment command, you must have the latest version of Azure CLI.
+templateFile="{provide-the-path-to-the-template-file}"
+az deployment group create --name blanktemplate --resource-group myResourceGroup --template-file $templateFile
+
+{
+  "$schema": "https://schema.management.azure.com/schemas/2024-03-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.1",
+  "apiProfile": "",
+  "parameters": {},
+  "variables": {},
+  "functions": [],
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2024-03-01",
+      "name": "learntemplatestorage123",
+      "location": "westus",
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "StorageV2",
+      "properties": {
+        "supportsHttpsTrafficOnly": true
+      }
+    }
+  ],
+  "outputs": {}
+}
