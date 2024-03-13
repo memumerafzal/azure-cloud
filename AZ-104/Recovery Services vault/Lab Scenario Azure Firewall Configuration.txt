@@ -1,0 +1,37 @@
+Configure Azure Firewall to control traffic flow between two virtual networks.
+
+Requirements:
+Azure subscription with permissions to create resources.
+Two virtual networks (VNet1 and VNet2) created in the same region.
+Virtual machines deployed in each VNet for testing connectivity.
+Azure Firewall deployed in a subnet in either VNet1 or VNet2.
+Tasks:
+Create Azure Firewall:
+
+Navigate to the Azure portal and create a new Azure Firewall resource.
+Choose the appropriate subscription, resource group, and region.
+Create a new public IP address or use an existing one.
+Configure the firewall settings as per your requirements.
+Place the firewall in a subnet within VNet1 or VNet2.
+Configure Network Rules:
+
+Define network rules to allow or deny traffic between VNet1 and VNet2.
+Allow required inbound and outbound traffic based on your scenario. For example, allow HTTP/HTTPS, SSH, RDP, etc., as needed.
+Deny all other traffic by default.
+Associate Application Rules (Optional):
+
+If your scenario requires filtering based on applications or FQDNs, define application rules accordingly.
+Associate these rules with the network rules to enable application-level filtering.
+Test Connectivity:
+
+Deploy virtual machines in VNet1 and VNet2.
+Test connectivity between the VMs across different VNets.
+Verify that allowed traffic flows as expected and denied traffic is blocked.
+Monitor and Troubleshoot:
+
+Monitor Azure Firewall logs for traffic flows and rule matches.
+Troubleshoot any connectivity issues by examining logs and adjusting rules as necessary.
+Ensure that traffic is appropriately filtered according to your defined rules.
+Additional Notes:
+Take advantage of Azure Firewall diagnostic settings to stream logs to Azure Monitor for deeper insights into traffic patterns and security events.
+Regularly review and update firewall rules to adapt to changing requirements and security threats.

@@ -1,0 +1,31 @@
+# Define variables
+$resourceGroupName = "YourResourceGroup"
+$vnetName = "YourVNet"
+$vnetAddressPrefix = "10.0.0.0/16"
+$subnetName = "YourSubnet"
+$subnetAddressPrefix = "10.0.0.0/24"
+$location = "YourLocation"
+
+# Create a new resource group
+New-AzResourceGroup -Name $resourceGroupName -Location $location
+
+# Create a new virtual network
+$vnet = New-AzVirtualNetwork `
+    -ResourceGroupName $resourceGroupName `
+    -Name $vnetName `
+    -Location $location `
+    -AddressPrefix $vnetAddressPrefix
+
+# Create a new subnet within the virtual network
+$subnet = Add-AzVirtualNetworkSubnetConfig `
+    -Name $subnetName `
+    -AddressPrefix $subnetAddressPrefix `
+    -VirtualNetwork $vnet
+
+# Associate the subnet with the virtual network
+$vnet | Set-AzVirtualNetwork
+
+# Create a subnet
+Add-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix $subnetAddressPrefix -VirtualNetwork $vnet | Set-AzVirtualNetwork
+
+Write-Output "Virtual Network $vnetName with Subnet $subnetName created successfully."
