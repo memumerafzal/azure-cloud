@@ -1,0 +1,10 @@
+The shipping company you work for wants to avoid any future issues with updates to its applications on the Azure platform. To improve the alert capabilities in Azure, you've chosen to use Azure metric alerts.
+
+In this exercise, you'll create a Linux virtual machine (VM). This VM will run an app that runs the CPU at 100 percent utilization. You'll create monitoring rules in the Azure portal and in the Azure CLI to alert you about high CPU usage.
+
+Create the VM
+This VM will run a specific configuration that stresses the CPU and generates the metric monitoring data needed to trigger an alert.
+
+1. Start by creating the configuration script. To create the cloud-init.txt file with the configuration for the VM, run the following command in Azure Cloud Shell:
+
+2. To set up an Ubuntu Linux VM, run the following az vm create command. This command uses the cloud-init.txt file that you created in the previous step to configure the VM after it's created.
