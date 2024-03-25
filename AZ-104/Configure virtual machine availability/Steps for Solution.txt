@@ -1,0 +1,39 @@
+# Task 1: Deploy zone-resilient Azure virtual machines
+# Create first virtual machine in the Azure portal
+
+# Review and deploy second virtual machine using an Azure Resource Manager template
+New-AzResourceGroupDeployment `
+  -ResourceGroupName "YourResourceGroup" `
+  -TemplateFile "Path\to\your\template.json"
+
+# Task 2: Configure Azure virtual machines using virtual machine extensions
+# Create blob storage container and upload Azure PowerShell script
+# Use custom script extension to run script on a virtual machine
+# Export template and configure to install role on different virtual machine
+
+# Task 3: Scale compute and storage for Azure virtual machines
+# Resize virtual machine
+# Create and attach new disk
+# Initialize and partition new disk using Azure PowerShell
+# Customize template to resize virtual machine and change disk configuration
+
+# Task 4: Register the Microsoft Insights and Microsoft Alerts Management resource providers
+Register-AzResourceProvider -ProviderNamespace "Microsoft.Insights"
+Register-AzResourceProvider -ProviderNamespace "Microsoft.AlertsManagement"
+
+# Task 5: Deploy zone-resilient Azure Virtual Machine Scale Sets
+# Create Virtual Machine Scale Set in Azure portal
+# Configure virtual network with inbound rule for HTTP
+# Configure load balancing and manual scaling
+# Deploy virtual scale set
+
+# Task 6: Configure Azure Virtual Machine Scale Sets using virtual machine extensions
+# Upload Azure PowerShell script to install Windows Server Web Server role
+# Run script on virtual machines using custom script extension feature
+# Confirm IIS availability on virtual machines
+
+# Task 7: Scale compute and storage for Azure Virtual Machine Scale Sets
+# Confirm virtual machines in scale set are in different regions
+# Configure autoscale based on metric
+# Use Azure PowerShell to start infinite loop sending HTTP requests to hosted web sites
+# Verify new resource provisioned
