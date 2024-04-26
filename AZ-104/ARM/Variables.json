@@ -1,0 +1,22 @@
+"variables": {
+  "<variable-name>": "<variable-value>",
+  "<variable-name>": {
+    <variable-complex-type-value>
+  },
+  "<variable-object-name>": {
+    "copy": [
+      {
+        "name": "<name-of-array-property>",
+        "count": <number-of-iterations>,
+        "input": <object-or-value-to-repeat>
+      }
+    ]
+  },
+  "copy": [
+    {
+      "name": "<variable-array-name>",
+      "count": <number-of-iterations>,
+      "input": <object-or-value-to-repeat>
+    }
+  ]
+}

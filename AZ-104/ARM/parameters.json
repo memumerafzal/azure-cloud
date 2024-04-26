@@ -1,0 +1,20 @@
+"parameters": {
+  "<parameter-name>" : {
+    "type" : "<type-of-parameter-value>",
+    "defaultValue": "<default-value-of-parameter>",
+    "allowedValues": [ "<array-of-allowed-values>" ],
+    "minValue": <minimum-value-for-int>,
+    "maxValue": <maximum-value-for-int>,
+    "minLength": <minimum-length-for-string-or-array>,
+    "maxLength": <maximum-length-for-string-or-array>,
+    "prefixItems": <schema-for-validating-array>,
+    "items": <schema-for-validating-array-or-boolean>,
+    "properties": <schema-for-validating-object>,
+    "additionalProperties": <schema-for-validating-object-or-boolean>,
+    "discriminator": <schema-to-apply>,
+    "nullable": <boolean>,
+    "metadata": {
+      "description": "<description-of-the parameter>"
+    }
+  }
+}
