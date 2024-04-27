@@ -1,0 +1,19 @@
+"functions": [
+  {
+    "namespace": "<namespace-for-functions>",
+    "members": {
+      "<function-name>": {
+        "parameters": [
+          {
+            "name": "<parameter-name>",
+            "type": "<type-of-parameter-value>"
+          }
+        ],
+        "output": {
+          "type": "<type-of-output-value>",
+          "value": "<function-return-value>"
+        }
+      }
+    }
+  }
+],
