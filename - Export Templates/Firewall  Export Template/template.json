@@ -1,0 +1,59 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "azureFirewalls_Firewall_name": {
+            "defaultValue": "Firewall",
+            "type": "String"
+        },
+        "publicIPAddresses_FW_IP_externalid": {
+            "defaultValue": "/subscriptions/66780841-6024-46f3-af02-95007a392a92/resourceGroups/Firewall-RG/providers/Microsoft.Network/publicIPAddresses/FW-IP",
+            "type": "String"
+        },
+        "virtualNetworks_FW_Vnet_externalid": {
+            "defaultValue": "/subscriptions/66780841-6024-46f3-af02-95007a392a92/resourceGroups/Firewall-RG/providers/Microsoft.Network/virtualNetworks/FW-Vnet",
+            "type": "String"
+        },
+        "firewallPolicies_FW_Policy_externalid": {
+            "defaultValue": "/subscriptions/66780841-6024-46f3-af02-95007a392a92/resourceGroups/Firewall-RG/providers/Microsoft.Network/firewallPolicies/FW-Policy",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/azureFirewalls",
+            "apiVersion": "2023-11-01",
+            "name": "[parameters('azureFirewalls_Firewall_name')]",
+            "location": "eastus",
+            "properties": {
+                "sku": {
+                    "name": "AZFW_VNet",
+                    "tier": "Standard"
+                },
+                "threatIntelMode": "Alert",
+                "additionalProperties": {},
+                "ipConfigurations": [
+                    {
+                        "name": "FW-IP",
+                        "id": "[concat(resourceId(concat('Microsoft.Network/azure', parameters('azureFirewalls_Firewall_name'), 's'), parameters('azureFirewalls_Firewall_name')), concat('/azure', parameters('azureFirewalls_Firewall_name'), 'IpConfigurations/FW-IP'))]",
+                        "properties": {
+                            "publicIPAddress": {
+                                "id": "[parameters('publicIPAddresses_FW_IP_externalid')]"
+                            },
+                            "subnet": {
+                                "id": "[concat(parameters('virtualNetworks_FW_Vnet_externalid'), concat('/subnets/Azure', parameters('azureFirewalls_Firewall_name'), 'Subnet'))]"
+                            }
+                        }
+                    }
+                ],
+                "networkRuleCollections": [],
+                "applicationRuleCollections": [],
+                "natRuleCollections": [],
+                "firewallPolicy": {
+                    "id": "[parameters('firewallPolicies_FW_Policy_externalid')]"
+                }
+            }
+        }
+    ]
+}
