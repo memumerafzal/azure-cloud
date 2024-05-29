@@ -1,0 +1,337 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": {
+                "type": "String",
+                "value": "eastus"
+            }
+        },
+        "networkInterfaceName": {
+            "value": {
+                "type": "String",
+                "value": "vm1242"
+            }
+        },
+        "subnetName": {
+            "value": {
+                "type": "String",
+                "value": "VM1-VNET"
+            }
+        },
+        "virtualNetworkName": {
+            "value": {
+                "type": "String",
+                "value": "VM1-vnet"
+            }
+        },
+        "addressPrefixes": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    "10.4.0.0/16"
+                ]
+            }
+        },
+        "subnets": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    {
+                        "name": "VM1-VNET",
+                        "properties": {
+                            "addressPrefix": "10.4.0.0/24"
+                        }
+                    }
+                ]
+            }
+        },
+        "virtualMachineName": {
+            "value": {
+                "type": "String",
+                "value": "VM1"
+            }
+        },
+        "virtualMachineComputerName": {
+            "value": {
+                "type": "String",
+                "value": "VM1"
+            }
+        },
+        "virtualMachineRG": {
+            "value": {
+                "type": "String",
+                "value": "Backup-RG"
+            }
+        },
+        "osDiskType": {
+            "value": {
+                "type": "String",
+                "value": "Premium_LRS"
+            }
+        },
+        "osDiskDeleteOption": {
+            "value": {
+                "type": "String",
+                "value": "Delete"
+            }
+        },
+        "dataDisks": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    {
+                        "lun": 0,
+                        "createOption": "attach",
+                        "deleteOption": "Detach",
+                        "caching": "ReadOnly",
+                        "writeAcceleratorEnabled": false,
+                        "id": null,
+                        "name": "VM1_DataDisk_0",
+                        "storageAccountType": null,
+                        "diskSizeGB": null,
+                        "diskEncryptionSet": null
+                    }
+                ]
+            }
+        },
+        "dataDiskResources": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    {
+                        "name": "VM1_DataDisk_0",
+                        "sku": "Premium_LRS",
+                        "properties": {
+                            "diskSizeGB": 8,
+                            "creationData": {
+                                "createOption": "empty"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "virtualMachineSize": {
+            "value": {
+                "type": "String",
+                "value": "Standard_B2s"
+            }
+        },
+        "nicDeleteOption": {
+            "value": {
+                "type": "String",
+                "value": "Delete"
+            }
+        },
+        "hibernationEnabled": {
+            "value": {
+                "type": "Bool",
+                "value": false
+            }
+        },
+        "adminUsername": {
+            "value": {
+                "type": "String",
+                "value": "kholding"
+            }
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "patchMode": {
+            "value": {
+                "type": "String",
+                "value": "AutomaticByOS"
+            }
+        },
+        "enableHotpatching": {
+            "value": {
+                "type": "Bool",
+                "value": false
+            }
+        },
+        "sqlVirtualMachineLocation": {
+            "value": {
+                "type": "String",
+                "value": "eastus"
+            }
+        },
+        "sqlVirtualMachineName": {
+            "value": {
+                "type": "String",
+                "value": "VM1"
+            }
+        },
+        "sqlConnectivityType": {
+            "value": {
+                "type": "String",
+                "value": "Private"
+            }
+        },
+        "sqlPortNumber": {
+            "value": {
+                "type": "Int",
+                "value": 1433
+            }
+        },
+        "sqlStorageDisksCount": {
+            "value": {
+                "type": "Int",
+                "value": 1
+            }
+        },
+        "sqlStorageWorkloadType": {
+            "value": {
+                "type": "String",
+                "value": "OLTP"
+            }
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": {
+                "type": "String",
+                "value": "NEW"
+            }
+        },
+        "sqlStorageStartingDeviceId": {
+            "value": {
+                "type": "Int",
+                "value": 2
+            }
+        },
+        "sqlStorageDeploymentToken": {
+            "value": {
+                "type": "Int",
+                "value": 78550
+            }
+        },
+        "sqlAuthenticationLogin": {
+            "value": {
+                "type": "String",
+                "value": "kholding"
+            }
+        },
+        "sqlAuthenticationPassword": {
+            "value": null
+        },
+        "dataPath": {
+            "value": {
+                "type": "String",
+                "value": "F:\\data"
+            }
+        },
+        "dataDisksLUNs": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    0
+                ]
+            }
+        },
+        "logPath": {
+            "value": {
+                "type": "String",
+                "value": "F:\\log"
+            }
+        },
+        "logDisksLUNs": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    0
+                ]
+            }
+        },
+        "tempDbPath": {
+            "value": {
+                "type": "String",
+                "value": "D:\\tempDb"
+            }
+        },
+        "dataFileCount": {
+            "value": {
+                "type": "Int",
+                "value": 2
+            }
+        },
+        "dataFileSize": {
+            "value": {
+                "type": "Int",
+                "value": 8
+            }
+        },
+        "dataGrowth": {
+            "value": {
+                "type": "Int",
+                "value": 64
+            }
+        },
+        "logFileSize": {
+            "value": {
+                "type": "Int",
+                "value": 8
+            }
+        },
+        "logGrowth": {
+            "value": {
+                "type": "Int",
+                "value": 64
+            }
+        },
+        "sqlSystemDbOnDataDisk": {
+            "value": {
+                "type": "Bool",
+                "value": false
+            }
+        },
+        "rServicesEnabled": {
+            "value": {
+                "type": "String",
+                "value": "false"
+            }
+        },
+        "maxdop": {
+            "value": {
+                "type": "Int",
+                "value": 0
+            }
+        },
+        "isOptimizeForAdHocWorkloadsEnabled": {
+            "value": {
+                "type": "Bool",
+                "value": false
+            }
+        },
+        "collation": {
+            "value": {
+                "type": "String",
+                "value": "SQL_Latin1_General_CP1_CI_AS"
+            }
+        },
+        "minServerMemoryMB": {
+            "value": {
+                "type": "Int",
+                "value": 0
+            }
+        },
+        "maxServerMemoryMB": {
+            "value": {
+                "type": "Int",
+                "value": 2147483647
+            }
+        },
+        "isLPIMEnabled": {
+            "value": {
+                "type": "Bool",
+                "value": false
+            }
+        },
+        "isIFIEnabled": {
+            "value": {
+                "type": "Bool",
+                "value": false
+            }
+        }
+    }
+}
