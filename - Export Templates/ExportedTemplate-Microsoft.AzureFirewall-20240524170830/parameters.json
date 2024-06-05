@@ -1,0 +1,84 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": {
+                "type": "String",
+                "value": "eastus"
+            }
+        },
+        "resourceGroup": {
+            "value": {
+                "type": "String",
+                "value": "Firewall-RG"
+            }
+        },
+        "azureFirewallName": {
+            "value": {
+                "type": "String",
+                "value": "Firewall"
+            }
+        },
+        "azureFirewallTier": {
+            "value": {
+                "type": "String",
+                "value": "Standard"
+            }
+        },
+        "vnetName": {
+            "value": {
+                "type": "String",
+                "value": "FW-Vnet"
+            }
+        },
+        "vnetAddressSpace": {
+            "value": {
+                "type": "String",
+                "value": "10.5.0.0/16"
+            }
+        },
+        "vnetAddressSpaceV6": {
+            "value": {
+                "type": "String",
+                "value": ""
+            }
+        },
+        "subnetAddressSpace": {
+            "value": {
+                "type": "String",
+                "value": "10.5.0.0/24"
+            }
+        },
+        "subnetAddressSpaceV6": {
+            "value": {
+                "type": "String",
+                "value": ""
+            }
+        },
+        "zones": {
+            "value": {
+                "type": "Array",
+                "value": []
+            }
+        },
+        "publicIpAddressName": {
+            "value": {
+                "type": "String",
+                "value": "FW-IP"
+            }
+        },
+        "publicIpZones": {
+            "value": {
+                "type": "Array",
+                "value": []
+            }
+        },
+        "publicIpV6AddressName": {
+            "value": {
+                "type": "String",
+                "value": "IpV6Conf"
+            }
+        }
+    }
+}
