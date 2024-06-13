@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.5",
+    "parameters": {
+        "name": {
+            "type": "String"
+        },
+        "location": {
+            "type": "String"
+        },
+        "tagsByResource": {
+            "defaultValue": {},
+            "type": "Object",
+            "metadata": {
+                "description": "Optional tags provided by the user via createUiDefinition.json"
+            }
+        },
+        "disableBgpRoutePropagation": {
+            "type": "Bool"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/routeTables",
+            "apiVersion": "2019-02-01",
+            "name": "[parameters('name')]",
+            "location": "[parameters('location')]",
+            "tags": "[ if(contains(parameters('tagsByResource'), 'Microsoft.Network/routeTables'), parameters('tagsByResource')['Microsoft.Network/routeTables'], json('{}')) ]",
+            "properties": {
+                "disableBgpRoutePropagation": "[parameters('disableBgpRoutePropagation')]"
+            }
+        }
+    ],
+    "outputs": {}
+}
